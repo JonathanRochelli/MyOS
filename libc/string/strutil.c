@@ -1,6 +1,5 @@
 #include "../include/string.h"
 
-
 int isupper(char c)
 {
     return (c >= 'A' && c <= 'Z');
@@ -18,7 +17,7 @@ int isalpha(char c)
 
 int isspace(char c)
 {
-    return (c == ' ' || c == '\t' || c == '\n' || c=='\12');
+    return (c == ' ' || c == '\t' || c == '\n' || c == '\12');
 }
 
 int isdigit(char c)
@@ -26,21 +25,22 @@ int isdigit(char c)
     return (c >= '0' && c <= '9');
 }
 
-char* ltrim(char *s)
+char *ltrim(char *s)
 {
-    while(isspace(*s)) s++;
+    while (isspace(*s)) s++;
     return s;
 }
 
-char* rtrim(char *s)
+char *rtrim(char *s)
 {
     char* back = s + strlen(s);
-    while(isspace(*--back));
-    *(back+1) = '\0';
+    while (isspace(*--back));
+    *(back + 1) = '\0';
     return s;
 }
 
-char* trim (char* s)
+char *trim(char *s)
 {
-    return rtrim(ltrim(s));
+    return rtrim(ltrim(s)); 
 }
+

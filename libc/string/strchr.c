@@ -1,9 +1,10 @@
 #include "../include/string.h"
 
-char* strchr(const char* s, int c)
+char *strchr(const char *s, int c)
 {
-    while(*s != (char)c)
-        if(!*s++)
+    while (*s != (char)c)
+        if (!*s++)
             return 0;
-    return (char*)s;
+    return (char *)s;
 }
+
